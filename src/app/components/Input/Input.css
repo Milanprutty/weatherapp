@@ -1,0 +1,40 @@
+.inputContainer > form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.inputContainer {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputContainer > form > label {
+  font-size: 42px;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.inputContainer > form > input {
+  height: 25px;
+  width: 70%;
+
+  background-color: #61677a;
+
+  border: 2px black solid;
+
+  text-align: center;
+}
+
+.inputContainer > form > button {
+  background-color: #4e9f3d;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
