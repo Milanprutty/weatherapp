@@ -16,7 +16,7 @@ const WeatherInfoContainer = () => {
 
   const fetchHours = () => {
     const date = new Date().getHours();
-    console.log(date);
+
     return date;
   };
 
@@ -24,7 +24,7 @@ const WeatherInfoContainer = () => {
     try {
       const res = await WeatherApi(currentText);
       setCurrHour(fetchHours());
-      console.log(res);
+
       setApiInfo(res);
     } catch (error) {
       setApiInfo();
