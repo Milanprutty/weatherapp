@@ -1,0 +1,62 @@
+.InfoBoxContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.InfoBox {
+  background-color: rgb(99, 99, 204);
+  height: 500px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.ImgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+
+.ImgDiv > img {
+  width: 30%;
+  height: 70%;
+  object-fit: contain;
+  color: black !important;
+}
+
+.InfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 48px;
+  color: white;
+  margin-top: -20px;
+}
+
+.InfoContainer > :nth-child(2) {
+  font-size: 32px;
+}
+
+.IconContainer {
+  display: flex;
+  margin-top: 50px;
+  gap: 2rem;
+
+  font-size: 30px;
+}
+
+@media (max-width: 327px) {
+  .IconContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 0rem;
+  }
+}
+
+.infos {
+  height: 500px;
+}

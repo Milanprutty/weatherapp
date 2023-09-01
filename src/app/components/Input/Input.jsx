@@ -1,30 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import WeatherApi from "../api/WeatherApi";
+import { BiSearch } from "react-icons/bi";
 import "./Input.css";
 
-const Input = () => {
+const Input = ({ getData }) => {
   const [currentText, setCurrentText] = useState("");
-  const [apiInfo, setApiInfo] = useState("");
-
-  const getData = async () => {
-    try {
-      const res = await WeatherApi(currentText);
-
-      setApiInfo(res);
-      console.log(apiInfo);
-    } catch (error) {
-      setApiInfo();
-      console.log(error);
-    }
-  };
 
   const handleChange = (e) => {
     setCurrentText(e.target.value);
   };
 
   const handleSubmit = (e) => {
-    getData();
+    getData(currentText);
     e.preventDefault();
     setCurrentText("");
   };
@@ -33,10 +20,16 @@ const Input = () => {
     <div>
       <div className="inputContainer">
         <form onSubmit={handleSubmit}>
-          <label>enter a city name</label>
-          <input onChange={handleChange} value={currentText} required />
-          <button>submit</button>
-          {apiInfo?.data?.name}
+          <input
+            id="cityInput"
+            onChange={handleChange}
+            value={currentText}
+            required
+            placeholder="Enter A City"
+          />
+          <button className="formBtn">
+            <BiSearch />
+          </button>
         </form>
       </div>
     </div>

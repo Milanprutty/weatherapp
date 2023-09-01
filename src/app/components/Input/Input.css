@@ -1,40 +1,47 @@
-.inputContainer > form {
+.inputContainer {
   display: flex;
-  align-items: center;
-  gap: 1rem;
   flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 4%;
+
+  margin-left: 2%;
 }
 
-.inputContainer {
-  height: 50vh;
+.inputContainer > form {
+  display: flex;
+  padding-right: 5%;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#cityInput {
+  border: none;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.inputContainer > label {
+  font-size: 24px;
+}
+
+#cityInput::placeholder {
+  padding-left: 10px;
+}
+
+.formBtn {
+  border-radius: 50%;
+  width: 35px;
+  border: none;
+  height: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.inputContainer > form > label {
-  font-size: 42px;
-  color: white;
-  text-transform: capitalize;
-  text-align: center;
-}
-
-.inputContainer > form > input {
-  height: 25px;
-  width: 70%;
-
-  background-color: #61677a;
-
-  border: 2px black solid;
-
-  text-align: center;
-}
-
-.inputContainer > form > button {
-  background-color: #4e9f3d;
-  border: none;
   cursor: pointer;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 3px;
-  text-transform: uppercase;
+}
+
+@media (max-width: 337px) {
+  .inputContainer > form {
+    flex-wrap: wrap;
+    margin-right: -2%;
+  }
 }
