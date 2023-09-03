@@ -7,7 +7,7 @@ import Image from "next/image";
 import WeatherApi from "../api/WeatherApi";
 import { images } from "./WeatherPics";
 import { BiWater, BiWind } from "react-icons/bi";
-
+//
 const WeatherInfoContainer = () => {
   const [apiInfo, setApiInfo] = useState("");
   const [currentImg, setCurrentImg] = useState("");
